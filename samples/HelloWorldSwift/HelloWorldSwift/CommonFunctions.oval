@@ -1,0 +1,129 @@
+yield _DoRawMotor (float leftMotor, float rightMotor, float duration) {
+  float finishTime = currentRobotTime + duration;
+  while (currentRobotTime < finishTime){
+    controlSystemIsOn = 0;
+    leftMotorPwm = leftMotor;
+    rightMotorPwm = rightMotor;
+    yield;
+    wait;
+  }
+  controlSystemIsOn = 1;
+  leftMotorPwm = 0;
+  rightMotorPwm = 0;
+}
+
+yield _DoDelay(float duration) {
+  float finishTime = currentRobotTime + duration;
+  while (currentRobotTime < finishTime){
+    yield;
+    wait;
+  }
+}
+
+yield _DoFade(float startingR, float startingG, float startingB, float fadeTime, float endingR, float endingG, float endingB) {
+  float startTime = currentRobotTime;
+  float blend = 0.0;
+  int done = false;
+
+  if( fadeTime <=0.0 ) {
+    done = true;
+  }
+
+  while(not done) {
+    blend = ((currentRobotTime - startTime) / fadeTime);
+    if (blend > 1.0) {
+      blend = 1.0;
+    }
+
+    redLed = ((startingR  * (1.0 -blend)) + (endingR * blend));
+    greenLed = ((startingG  * (1.0 -blend)) + (endingG * blend));
+    blueLed = ((startingB  * (1.0 -blend)) + (endingB * blend));
+
+    if(currentRobotTime >= (startTime + fadeTime)) {
+      done = true;
+    }
+
+    yield;
+  }
+}
+
+
+yield LowAlert() {
+  setRgbLed(255, 0, 0);
+  yield _DoRawMotor(3000, 3000, 2);
+  setRgbLed(255, 0, 0);
+  yield _DoDelay(5);
+  setRgbLed(0, 0, 0);
+}
+
+yield HighAlert() {
+  setRgbLed(255, 0, 0);
+  yield _DoRawMotor(4000, 4000, 3);
+  setRgbLed(255, 0, 0);
+  yield _DoDelay(5);
+  setRgbLed(0, 0, 0);
+}
+
+yield AlertTest() {
+  controlSystemTargetYaw = 0;
+  setRgbLed(41, 255, 34);
+  controlSystemTargetSpeed = 92;
+  backLed = 152;
+  yield _DoRawMotor(2000, 200, 0);
+  setRgbLed(67, 255, 66);
+  backLed = 155;
+  controlSystemTargetYaw = controlSystemTargetYaw + 180 ;
+  controlSystemTargetSpeed = 99;
+  controlSystemTargetSpeed = 0;
+}
+
+yield HappyCircle() {
+  controlSystemTargetYaw = 0;
+  setRgbLed(255, 0, 0 );
+  yield _DoDelay( 0.25 );
+  int loopCount_192 = 0;
+  while( loopCount_192 < 4) {
+    loopCount_192 = loopCount_192 + 1;
+    setRgbLed(0, 255, 0 );
+    controlSystemTargetSpeed = 125;
+    yield _DoDelay( 0.75 );
+    controlSystemTargetSpeed = 0;
+    yield _DoDelay( 1.5 );
+    setRgbLed(255, 0, 0 );
+    yield _DoDelay( 0.5 );
+    controlSystemTargetYaw = ( controlSystemTargetYaw + 180 );
+    setRgbLed(92, 255, 88 );
+    backLed = 255;
+    yield _DoRawMotor( 400, 3000, 4 );
+    setRgbLed( 255, 255, 49 );
+    backLed = 255;
+  }
+
+}
+
+yield ClapsJump() {
+  setRgbLed(0, 255, 0);
+  backLed = 255;
+  yield _DoRawMotor(4095, 4095, 5);
+  setRgbLed(65, 255, 52);
+  backLed = 0;
+}
+
+yield TigerJump() {
+  setRgbLed(255, 66, 33);
+  backLed = 255;
+  yield _DoRawMotor(4095, 4095, 5);
+  setRgbLed(255, 0, 0);
+  backLed = 0;
+}
+
+yield GreenLight() {
+  setRgbLed(0, 255, 0);
+  yield _DoDelay(8);
+}
+
+yield OrangeLight() {
+  yield _DoFade(66, 255, 43, 5, 255, 102, 20);
+}
+
+...

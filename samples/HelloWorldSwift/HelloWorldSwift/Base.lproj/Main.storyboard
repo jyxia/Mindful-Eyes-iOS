@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorldSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrb-fO-WDX">
+                                <rect key="frame" x="256" y="28" width="88.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-b1-5pX">
+                                <rect key="frame" x="284" y="56" width="33" height="30"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="sendHighAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9O7-sK-2e4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kj-Jn-Gvv">
+                                <rect key="frame" x="276" y="94" width="49" height="30"/>
+                                <state key="normal" title="Cheers"/>
+                                <connections>
+                                    <action selector="sendCheerAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHA-Lj-c6Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpB-7P-tRR">
+                                <rect key="frame" x="279" y="132" width="42" height="30"/>
+                                <state key="normal" title="Green"/>
+                                <connections>
+                                    <action selector="sendGreenAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frx-Ke-KrF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sphero is not connected, Please re-connect!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7E-HX-eFM">
+                                <rect key="frame" x="120" y="570" width="360.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.80559501259999999" green="0.092033093100000005" blue="0.15625479480000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-lE-uNy">
+                                <rect key="frame" x="275" y="170" width="50" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Orange"/>
+                                <connections>
+                                    <action selector="sendOrangeAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QT3-pA-6Zf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J7E-HX-eFM" secondAttribute="bottom" constant="8" symbolic="YES" id="14v-Ah-gAG"/>
+                            <constraint firstItem="dZX-lE-uNy" firstAttribute="top" secondItem="wpB-7P-tRR" secondAttribute="bottom" constant="8" symbolic="YES" id="6mQ-w9-Ycj"/>
+                            <constraint firstItem="xrb-fO-WDX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AjL-lZ-2Tn"/>
+                            <constraint firstItem="wpB-7P-tRR" firstAttribute="top" secondItem="3kj-Jn-Gvv" secondAttribute="bottom" constant="8" symbolic="YES" id="GeH-ba-hy2"/>
+                            <constraint firstItem="wpB-7P-tRR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILx-pd-Elh"/>
+                            <constraint firstItem="dZX-lE-uNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YDo-GQ-TwG"/>
+                            <constraint firstItem="3kj-Jn-Gvv" firstAttribute="centerX" secondItem="Y4o-b1-5pX" secondAttribute="centerX" id="Z5d-Bn-ziL"/>
+                            <constraint firstItem="Y4o-b1-5pX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aRW-P6-Ry3"/>
+                            <constraint firstItem="Y4o-b1-5pX" firstAttribute="top" secondItem="xrb-fO-WDX" secondAttribute="bottom" constant="8" symbolic="YES" id="g4M-I7-xNo"/>
+                            <constraint firstItem="J7E-HX-eFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pvN-qQ-xrN"/>
+                            <constraint firstItem="3kj-Jn-Gvv" firstAttribute="top" secondItem="Y4o-b1-5pX" secondAttribute="bottom" constant="8" symbolic="YES" id="zSI-yn-lyj"/>
+                            <constraint firstAttribute="centerX" secondItem="xrb-fO-WDX" secondAttribute="centerX" constant="-0.5" id="zdg-LK-Scp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectionLabel" destination="xrb-fO-WDX" id="QMi-P5-qz8"/>
+                        <outlet property="noConnWarnLabel" destination="J7E-HX-eFM" id="Zyb-Qj-6En"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
