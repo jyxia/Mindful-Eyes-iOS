@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA5C22461A1E9078001F5117 /* HelloWorldSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5C22461A1E9078001F5117 /* Midful-Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Midful-Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C224A1A1E9078001F5117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5C224B1A1E9078001F5117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5C224D1A1E9078001F5117 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		EA5C22471A1E9078001F5117 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA5C22461A1E9078001F5117 /* HelloWorldSwift.app */,
+				EA5C22461A1E9078001F5117 /* Midful-Eye.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA5C22451A1E9078001F5117 /* HelloWorldSwift */ = {
+		EA5C22451A1E9078001F5117 /* Midful-Eye */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA5C22651A1E9078001F5117 /* Build configuration list for PBXNativeTarget "HelloWorldSwift" */;
+			buildConfigurationList = EA5C22651A1E9078001F5117 /* Build configuration list for PBXNativeTarget "Midful-Eye" */;
 			buildPhases = (
 				EA5C22421A1E9078001F5117 /* Sources */,
 				EA5C22431A1E9078001F5117 /* Frameworks */,
@@ -134,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWorldSwift;
+			name = "Midful-Eye";
 			productName = HelloWorldSwift;
-			productReference = EA5C22461A1E9078001F5117 /* HelloWorldSwift.app */;
+			productReference = EA5C22461A1E9078001F5117 /* Midful-Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA5C22411A1E9078001F5117 /* Build configuration list for PBXProject "HelloWorldSwift" */;
+			buildConfigurationList = EA5C22411A1E9078001F5117 /* Build configuration list for PBXProject "Midful-Eye" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -174,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA5C22451A1E9078001F5117 /* HelloWorldSwift */,
+				EA5C22451A1E9078001F5117 /* Midful-Eye */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Midful-Eye";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldSwift/HelloWorldSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -353,7 +353,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Midful-Eye";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorldSwift/HelloWorldSwift-Bridging-Header.h";
 			};
@@ -362,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA5C22411A1E9078001F5117 /* Build configuration list for PBXProject "HelloWorldSwift" */ = {
+		EA5C22411A1E9078001F5117 /* Build configuration list for PBXProject "Midful-Eye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA5C22631A1E9078001F5117 /* Debug */,
@@ -371,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA5C22651A1E9078001F5117 /* Build configuration list for PBXNativeTarget "HelloWorldSwift" */ = {
+		EA5C22651A1E9078001F5117 /* Build configuration list for PBXNativeTarget "Midful-Eye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA5C22661A1E9078001F5117 /* Debug */,
